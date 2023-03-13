@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url("./fire-102.gif") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.background-wrapper,
+.front-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-wrapper {
+    height: 98vh;
+    width: 67vw;
+    background:url("./dragon-knight.gif") no-repeat center center fixed;
+    background-size: contain;
+    margin: .5rem;
+    border: .5rem solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 3px red;
+    border-radius: 10px;
+}
+
+
+.front-wrapper{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+}
+
+#my-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+}
+
+label {
+    display: inline-block;
+    width: 18rem;
+    text-align: left;
+}
+
+input {
+    font-size: 1.5rem;
+    text-align: center;
+    border: none;
+    outline: none;
+}
+
+.input-field {
+    text-shadow: 0 0 4px rgba(255, 0 ,0, 0.8);
+}
+
+.form-class {
+    color: #757575;
+    text-shadow: 0 0 2px #AAA9AD;
+    caret-color: #757575;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    border: 2px solid black;
+    transition: all 0.3s ease-in;
+}
+
+.form-class:focus {
+    box-shadow: 0 0 2px 2px rgba(255, 215 ,0, 0.5), 0 0 4px 1px rgba(255 ,215 ,0 , 0.5) inset;
+    border: none;
+    transition: all 0.3s ease-in;
+}
+
+.invalid,
+.invalid:focus {
+    box-shadow: 0 0 2px 2px rgba(255, 0 ,0, 0.5), 0 0 4px 1px rgba(255, 0 ,0, 0.5) inset;
+    border: none;
+  }
+  
+  .valid,
+  .valid:focus {
+    box-shadow: 0 0 2px 2px rgba(0, 255, 0 ,0.5), 0 0 4px 1px rgba(0, 255, 0, 0.5) inset;
+    border: none;
+  }
+
+.input-field [type="radio"] {
+    -webkit-appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 3px solid black;
+    outline: none;
+    background-color: black;
+    transition: all 0.2s ease-in;
+}
+
+.input-field [type="radio"]:hover,
+.input-field [type="radio"]:focus {
+    box-shadow: 0 0 2px 2px rgba(255, 0 ,0, 0.5), 0 0 4px 1px rgba(255, 0 ,0, 0.5) inset;
+    transform: scale(1.2);
+    border: none;
+    transition: all 0.2s ease-in;
+}
+
+.input-field [type="radio"]:checked {
+    box-shadow: 0 0 2px 2px rgba(0, 255, 0, 0.5), 
+    0 0 4px 1px rgba(0, 255, 0, 0.5) inset;
+    border: none;
+    transition: all 0.2s ease-in;
+}
+
+.submit{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-button {
+    width: 70%;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    text-shadow: 0 0 4px rgba(255, 0 ,0, 0.5);
+}
+
+.start-button:hover {
+    animation: 1s pulse infinite;
+}
+
+.start-button:active {
+    animation: 1s pulseG infinite;
+    text-shadow: 0 0 4px rgba(0, 255 ,0, 0.5);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 0 ,0, 0.5);
+        transform: scale(1);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 0 ,0, 0) ;
+        transform: scale(1.1);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) ;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulseG {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 255 ,0, 0.5);
+        transform: scale(1);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 255 ,0, 0) ;
+        transform: scale(1.1);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 0, 0) ;
+        transform: scale(1);
+    }
+}
+
+/* Front Page END */
+
+/* Main Game START */
+
+.block-container {
+    background: url("./castle.jpg") no-repeat center center fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+  .title,
+  .display-turn,
+  .button-holder {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+  }
+  .title {
+    padding-top: 4rem;
+    font-size: 5rem;
+  }
+  .display-turn {
+    font-size: 2.5rem;
+  }
+  .button-holder {
+    cursor: pointer;
+    height: 20px;
+    padding-bottom: 3rem;
+  }
+  .btn {
+    transition: all 0.2s ease-in-out;
+  }
+  .btn:hover {
+    font-size: 2.3rem;
+  }
+  
+  #restartBtn {
+    padding-left: 2rem;
+  }
+  
+  .game-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+  }
+  
+  .game-board {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2rem;
+    width: 25vw;
+    height: 25vw;
+    border: 1px solid black;
+    padding: 10px;
+  }
+  
+  .block {
+    width: auto;
+    height: auto;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 1rem;
+    font-size: max(4vw, 3rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid black;
+    cursor: pointer;
+    font-family: 'Tilt Prism', cursive;
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .game-wrapper {
+      width: 100vw;
+    }
+    .game-board {
+      width: auto;
+    }
+  }
